@@ -1,49 +1,55 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
 import { Button } from 'react-native-web';
 
 function Page_1b() {
 
     return (
         <View style={styles.container}>
-            <View style={[styles.ctn1, { flex: 2 }]}>
+            <View style={[styles.ctn1, { flex: 1 }]}>
                 <View style={{ flex: 1 }}>
                     <Image
-                        style={styles.ellipseIcon}
-                        source={require('../assets/Ellipse1.png')}
+                        style={styles.icon}
+                        source={require('../assets/lock.png')}
                     />
                 </View>
-                <View style={{ flex: 1 }}>
-                    <View style={{ marginTop: 66 }}>
-                        <Text style={styles.text1}>GROW</Text>
-                        <Text style={styles.text1}>YOUR BUSINESS</Text>
+                <View style={{ }}>
+                    <View style={{ marginTop: 37 }}>
+                        <Text style={styles.text1}>FORGET</Text>
+                        <Text style={styles.text1}>PASSWORD</Text>
                     </View>
-                    <View style={{ marginTop: 50 }}>
-                        <Text style={[styles.text1, { fontSize: '15px' }]}>We will help you to grow your business using</Text>
-                        <Text style={[styles.text1, { fontSize: '15px' }]}>online server</Text>
+                    <View style={{ marginTop: 50}}>
+                        <Text style={[styles.text1, { fontSize: '15px' }]}>Provide your account's email for which you</Text>
+                        <Text style={[styles.text1, { fontSize: '15px' }]}>want to reset your password</Text>
                     </View>
                 </View>
             </View>
-            <View style={[styles.ctn1, { flex: 1 }]}>
+            <View style={[styles.ctn1, { flex: 1, marginTop:10 }]}>
+                <View style={[{flexDirection:'row', backgroundColor:'#C4C4C4',marginBottom:43},styles.ctn1]}>
+                    <Image style={{width: '48px', height: '45px', }}
+                        source={require('../assets/mail.png')}
+                    />
+                    <TextInput
+                    style = {[{width: '305px', height:'45px',fontSize:'15px'}]}
+                    placeholder='Email'
+                    placeholderTextColor='#000'
+                    
+                
+                    />
 
-                <View style={styles.buttonContainer}>
+                    
+                </View>
+
+
+                <View style={[styles.buttonContainer,{}]}>
                     <TouchableOpacity
-                        style={[styles.button, styles.loginButton]}
-                        onPress={() => console.log('Login pressed')}
+                        style={[styles.button, styles.nextButton, { width: '353px' }]}
+                        onPress={() => console.log('Next pressed')}
                     >
-                        <Text style={[styles.buttonText, styles.loginText]}>LOGIN</Text>
-                    </TouchableOpacity>
-                    <View style={{ width: '50px' }}></View>
-                    <TouchableOpacity
-                        style={[styles.button, styles.signupButton]}
-                        onPress={() => console.log('Signup pressed')}
-                    >
-                        <Text style={[styles.buttonText, styles.signupText]}>SIGNUP</Text>
+                        <Text style={[styles.buttonText, styles.nextText]}>NEXT</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={{ marginTop: 21 }}>
-                    <Text style={[styles.text1, { fontSize: '18px', width: '302px', height: '53px' }]}>HOME WE WORK?</Text>
-                </View>
+
 
             </View>
         </View>
@@ -63,10 +69,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    ellipseIcon: {
-        width: '142px',
-        height: '142px',
-        marginTop: 69,
+    icon: {
+        width: '105px',
+        height: '117px',
+        marginTop: 76,
     },
     text1: {
         textAlign: 'center',
@@ -83,7 +89,7 @@ const styles = StyleSheet.create({
         // marginBottom: '94px'
         // marginTop:'100px'
     },
-    loginButton: {
+    nextButton: {
         backgroundColor: '#E3C000',
     },
 
@@ -91,9 +97,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#E3C000',
     },
     button: {
-        width: 119,
-        height: 48,
-        borderRadius: 10, // Độ bo tròn để làm góc bo tròn
+        width: 305,
+        height: 45,
+        // borderRadius: 10, // Độ bo tròn để làm góc bo tròn
         alignItems: 'center',
         justifyContent: 'center',
     },

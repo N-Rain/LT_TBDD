@@ -41,10 +41,7 @@ function Page_1b() {
                         <Text style={[styles.buttonText, styles.signupText]}>SIGNUP</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={{ marginTop: 21 }}>
-                    <Text style={[styles.text1, { fontSize: '18px', width: '302px', height: '53px' }]}>HOME WE WORK?</Text>
-                </View>
-
+               
             </View>
         </View>
 
@@ -53,7 +50,7 @@ function Page_1b() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundImage: 'linear-gradient(180deg, #C7F4F6 0.03%, #D1F4F6 30.21%, #E5F4F5 85.42%, #00CCF9 100%)',
+        backgroundImage: 'linear-gradient(180deg, #00CCF9 0%, #00CCF9 100%)',
         alignItems: 'center',
         justifyContent: 'center',
 

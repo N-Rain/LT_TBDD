@@ -7,16 +7,16 @@ import React, { useState } from 'react';
 function Page_2a() {
     //khai báo
     const [isLogged, setIsLogged] = useState(false);
-    const [isLoginModal, setLoginModal] = useState(false);
+    // const [isLoginModal, setLoginModal] = useState(false);
 
     //xử lý
     const handleLogin = ()=>{
         setIsLogged(!isLogged);
-        setLoginModal(true);
+        // setLoginModal(true);
     };
-    const closeModal = ()=>{
-        setLoginModal(false)
-    }
+    // const closeModal = ()=>{
+    //     setLoginModal(false)
+    // }
       
     return ( 
         <View style = { styles.container } >

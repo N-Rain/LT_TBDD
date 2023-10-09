@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import { TextInput } from 'react-native';
 // import Modal from 'react-native-modal';
 import React, { useState } from 'react';
 import { AirbnbRating } from 'react-native-ratings';
+import CheckBox from 'expo-checkbox';
+
 
 function Page_2c_pw() {
     
@@ -23,16 +25,41 @@ function Page_2c_pw() {
                 </View>
 
                 <View style = {[styles.ctn1,{flex:3}]}>
-                    <View style = {[styles.ctn2,{flex:1,justifyContent:'space-between'}]}>
+                    <View style = {[styles.ctn2,{flex:1,justifyContent:'space-between',marginBottom:33}]}>
                         <Text style = {[styles.text, styles.text2]}>Password length</Text>
                         <TextInput
                             style = {[styles.text, styles.text2, styles.input]}
                             keyboardType='numeric'
                         />
                     </View>
-                    <View>
-
+                    <View style = {[styles.ctn3,{flex:4}]}>
+                        <View style = {[styles.ctn2,{justifyContent:'space-between'}]}>
+                            <Text style = {[styles.text, styles.text2]}>Include lower case letters</Text>
+                            <CheckBox
+                            
+                            />  
+                        </View>
+                        <View style = {[styles.ctn2,{justifyContent:'space-between'}]}>
+                            <Text style = {[styles.text, styles.text2]}>Include lower case letters</Text>
+                            <CheckBox
+                            
+                            />
+                        </View>
+                        <View style = {[styles.ctn2,{justifyContent:'space-between'}]}>
+                            <Text style = {[styles.text, styles.text2]}>Include lower case letters</Text>
+                            <CheckBox
+                            
+                            />
+                        </View>
+                        <View style = {[styles.ctn2,{justifyContent:'space-between'}]}>
+                            <Text style = {[styles.text, styles.text2]}>Include lower case letters</Text>
+                            <CheckBox
+                            
+                            />
+                        </View>
+                        
                     </View>
+                        
                 </View>
 
                 <View style = {[styles.ctn1,{flex:1}]}>
@@ -79,6 +106,7 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         width:'100%',
         height:'100%',
+        
         
     },
     ctn3:{

@@ -1,14 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
+import React,{ useEffect, useState } from 'react';
 import { StyleSheet, Text, View,Image, TouchableOpacity } from 'react-native';
 
-function Page_1() {
+function Page_1({route, navigation}) {
+  const[img, setImg] = useState(require('../assets/img/vs_blue.png'));
+  useEffect(()=>{
+    if(route.params){
+      setImg(route.params)
+    }
+  },[route.params]);
+
   return (
     <View style={styles.container}>
       <View style={[styles.ctn3,{flex:8}]}>
             <View style={[styles.ctn1,{flex:5}]}>
                 <Image
                     style ={styles.img}
-                    source={require('../assets/img/vs_blue.png')}
+                    source={img}
                     resizeMode='contain'
                 />
             </View>
@@ -64,7 +72,9 @@ function Page_1() {
                 <View style = {[styles.ctn1,{flex:2, justifyContent:'flex-start'}]}>
                     <TouchableOpacity
                         style = {[styles.btnChonMau,{}]}
-                        onPress={()=>alert('af')}
+                        onPress={()=>{
+                          navigation.navigate('Page_2')
+                        }}
                     >
                         <View style = {[styles.ctn2,{}]}>
                             <View style = {{flex:2,alignItems:'center'}}>

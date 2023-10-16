@@ -4,6 +4,11 @@ import { StyleSheet, Text, View,Image, TouchableOpacity, Pressable } from 'react
 
 function Page_2({navigation}) {
     const[img, setImg] = useState(require('../assets/img/vs_red.png'))
+    const[textColor, setTextColor] = useState('xanh')
+
+    const changeColor = (color)=>{
+      setTextColor(color)
+    }
   return (
     <View style={styles.container}>
         <View style = {[styles.ctn2,{flex:1}]}>
@@ -21,7 +26,7 @@ function Page_2({navigation}) {
                 </View>
                 <View style = {[styles.ctnText,{}]}>
                     <Text style = {[styles.text]}>Màu: 
-                        <Text style = {[styles.text, styles.text1]}> đỏ</Text>
+                        <Text style = {[styles.text, styles.text1]}> {textColor}</Text>
                     </Text>
                 </View>
                 <View style = {[styles.ctnText,{}]}>
@@ -45,24 +50,28 @@ function Page_2({navigation}) {
                         style = {[styles.pChonMau1,{backgroundColor:'#C5F1FB'}]}
                         onPress={()=>{
                             setImg(require('../assets/img/vs_silver.png'))
+                            changeColor('bạc')
                         }}
                     />
                     <Pressable
                         style = {[styles.pChonMau2,{backgroundColor:'#F30D0D'}]}
                         onPress={()=>{
                             setImg(require('../assets/img/vs_red.png'))
+                            changeColor('đỏ')
                         }}
                     />
                     <Pressable
                         style = {[styles.pChonMau3,{backgroundColor:'#000'}]}
                         onPress={()=>{
                             setImg(require('../assets/img/vs_black.png'))
+                            changeColor('đen')
                         }}
                     />
                     <Pressable
                         style = {[styles.pChonMau4,{backgroundColor:'#234896'}]}
                         onPress={()=>{
                             setImg(require('../assets/img/vs_blue.png'))
+                            changeColor('xanh')
                         }}
                         
                     />

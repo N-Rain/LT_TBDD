@@ -1,0 +1,34 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "username": "john_doe",
+      "password": "hashed_password"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Mua thực phẩm",
+      "completed": false,
+      "priority": "high",
+      "color": "#FF0000"
+    },
+    {
+      "id": "2",
+      "title": "Hoàn thành bài tập",
+      "completed": true,
+      "priority": "medium",
+      "color": "#FFFF00"
+    },
+    {
+      "title": "adagd",
+      "completed": false,
+      "priority": "high",
+      "color": "#FF0000",
+      "id": "3ukyROs"
+    }
+  ]
+}
